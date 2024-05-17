@@ -3,7 +3,7 @@
 namespace FlavioMartil\AccessControl\Middleware;
 
 use Closure;
-use FlavioMartil\AccessControl\Exceptions\Exceptions\AccessControlException;
+use FlavioMartil\AccessControl\Exceptions\AccessControlException;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
