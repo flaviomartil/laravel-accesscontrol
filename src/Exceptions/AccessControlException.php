@@ -6,7 +6,6 @@ use http\Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Response;
 use Illuminate\Validation\ValidationException;
-use function App\Exceptions\__;
 
 class AccessControlException extends ValidationException
 {
