@@ -1,6 +1,6 @@
 <?php
 
-namespace flaviomartil\accesscontrol\Exceptions;
+namespace FlavioMartil\AccessControl\Exceptions;
 
 use http\Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;

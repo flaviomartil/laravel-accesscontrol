@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Traits;
-
+namespace FlavioMartil\AccessControl\Traits;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 trait AccessControl

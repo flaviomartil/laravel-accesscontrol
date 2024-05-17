@@ -1,6 +1,6 @@
 <?php
 
-namespace flaviomartil\accesscontrol\Middleware;
+namespace FlavioMartil\AccessControl\Middleware;
 
 use Closure;
 use flaviomartil\accesscontrol\Exceptions\AccessControlException;

@@ -1,6 +1,6 @@
 <?php
 
-namespace flaviomartil\accesscontrol\Models;
+namespace FlavioMartil\AccessControl\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace FlavioMartil\AccessControl\AccessControl;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -24,5 +24,7 @@ class AccessControlProvider extends ServiceProvider
             ], 'migrations');
 
         }
+
+
     }
 }

@@ -21,13 +21,13 @@
   },
   "autoload": {
     "psr-4": {
-      "flaviomartil\\accesscontrol\\": "src/"
+      "FlavioMartil\\AccessControl\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "flaviomartil\\accesscontrol\\AccessControlServiceProvider"
+        "FlavioMartil\\AccessControl\\AccessControlServiceProvider"
       ]
     }
   },
