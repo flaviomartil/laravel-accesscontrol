@@ -27,7 +27,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "FlavioMartil\\AccessControl\\AccessControlServiceProvider"
+        "FlavioMartil\\AccessControl\\ServiceProvider\\AccessControlServiceProvider"
       ]
     }
   },
