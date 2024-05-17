@@ -6,14 +6,8 @@ use Illuminate\Support\ServiceProvider;
 
 class AccessControlProvider extends ServiceProvider
 {
-    public function register()
-    {
-
-    }
-
     public function boot()
     {
-        // Publish the configuration file during package boot
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/accesscontrol.php' => config_path('accesscontrol.php'),
@@ -22,9 +16,13 @@ class AccessControlProvider extends ServiceProvider
             $this->publishes([
                 __DIR__ . '/../assets/migrations/' => database_path('migrations'),
             ], 'migrations');
-
         }
+    }
 
-
+    public function register()
+    {
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/accesscontrol.php', 'accesscontrol'
+        );
     }
 }
