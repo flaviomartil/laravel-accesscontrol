@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'role_model' => FlavioMartil\AccessControl\models\Role::class,
-    'permission_model' => FlavioMartil\AccessControl\models\Permission::class,
-    'module_model' => FlavioMartil\AccessControl\models\Module::class,
+    'role_model' => FlavioMartil\AccessControl\Models\Role::class,
+    'permission_model' => FlavioMartil\AccessControl\Models\Permission::class,
+    'module_model' => FlavioMartil\AccessControl\Models\Module::class,
     'group_access_table' => 'group_access',
     'permission_role_table' => 'permission_role',
     'user_id_column' => 'user_id',
