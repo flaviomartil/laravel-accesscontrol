@@ -1,6 +1,6 @@
 <?php
 
-namespace FlavioMartil\AccessControl\AccessControl;
+namespace FlavioMartil\AccessControl\ServiceProvider;
 
 use Illuminate\Support\ServiceProvider;
 
