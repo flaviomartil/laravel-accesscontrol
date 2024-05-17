@@ -18,8 +18,8 @@ class AccessControlProvider extends ServiceProvider
             ], 'migrations');
 
             $this->publishes([
-                __DIR__.'/resources/lang' => resource_path('lang/vendor/accesscontrol'),
-            ], 'translations');
+                __DIR__.'/../lang' => $this->app->langPath('vendor/flaviomartil/accesscontrol'),
+            ]);
         }
     }
 
