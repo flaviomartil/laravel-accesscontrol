@@ -16,6 +16,10 @@ class AccessControlProvider extends ServiceProvider
             $this->publishes([
                 __DIR__ . '/../assets/migrations/' => database_path('migrations'),
             ], 'migrations');
+
+            $this->publishes([
+                __DIR__.'/resources/lang' => resource_path('lang/vendor/accesscontrol'),
+            ], 'translations');
         }
     }
 
