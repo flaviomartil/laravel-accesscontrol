@@ -10,7 +10,7 @@ class AccessControlProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/accesscontrol.php' => config_path('accesscontrol.php'),
+                __DIR__ . '/../assets/config/accesscontrol.php' => config_path('accesscontrol.php'),
             ], 'config');
 
             $this->publishes([
@@ -21,12 +21,20 @@ class AccessControlProvider extends ServiceProvider
                 __DIR__ . '/../assets/lang/' => resource_path('lang')
             ], 'language');
         }
+
+        $this->loadRoutes();
+    }
+
+    protected function loadRoutes()
+    {
+        Route::namespace('FlavioMartil\AccessControl\Http\Controllers')
+            ->group(__DIR__ . '/../assets/routes.php');
     }
 
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/accesscontrol.php', 'accesscontrol'
+            __DIR__ . '/../config/accesscontrol.php', 'accesscontrol'
         );
     }
 }
