@@ -3,6 +3,7 @@
 namespace FlavioMartil\AccessControl\ServiceProvider;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Route;
 
 class AccessControlProvider extends ServiceProvider
 {
