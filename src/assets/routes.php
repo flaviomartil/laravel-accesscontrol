@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use FlavioMartil\AccessControl\Http\Controllers\AccessGroupController;
+use FlavioMartil\AccessControl\Controllers\AccessGroupController;
 
 Route::get('/get-access-groups', [AccessGroupController::class, 'getAccessGroups']);
 Route::put('/set-access-groups', [AccessGroupController::class, 'setAccessGroups']);
