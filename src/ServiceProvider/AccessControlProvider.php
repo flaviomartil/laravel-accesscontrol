@@ -28,7 +28,9 @@ class AccessControlProvider extends ServiceProvider
 
     protected function loadRoutes()
     {
-        Route::namespace('FlavioMartil\AccessControl\Controllers')
+        Route::prefix(config('accesscontrol.prefix'))
+            ->middleware(config('accesscontrol.middleware'))
+            ->namespace('FlavioMartil\AccessControl\Controllers')
             ->group(__DIR__ . '/../assets/routes.php');
     }
 
