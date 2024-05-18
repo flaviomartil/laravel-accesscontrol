@@ -2,7 +2,7 @@
 
 return [
     'prefix' => 'api',
-    'middleware' => 'passport.auth',
+    'middleware' => ['passport.auth'],
     'role_model' => FlavioMartil\AccessControl\Models\Role::class,
     'permission_model' => FlavioMartil\AccessControl\Models\Permission::class,
     'module_model' => FlavioMartil\AccessControl\Models\Module::class,
@@ -15,6 +15,7 @@ return [
     'tenant' =>
         [
             'use_tenant' => true,
+            'tenant_middleware' => \App\Http\Middleware\InitializeTenantByDomainOrSubDomainCustom::class,
             'tenant_identifier_model' => Stancl\Tenancy\Contracts\Tenant::class, // Default for stancl laravel for tenancy
             'tenant_key' => 'id',
         ]

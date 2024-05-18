@@ -29,7 +29,7 @@ class AccessControlProvider extends ServiceProvider
     protected function loadRoutes()
     {
         Route::prefix(config('accesscontrol.prefix'))
-            ->middleware([config('accesscontrol.middleware')])
+            ->middleware(config('accesscontrol.middleware'))
             ->namespace('FlavioMartil\AccessControl\Controllers')
             ->group(__DIR__ . '/../assets/routes.php');
     }
