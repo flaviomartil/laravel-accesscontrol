@@ -27,14 +27,14 @@ class AccessControlProvider extends ServiceProvider
 
     protected function loadRoutes()
     {
-        Route::namespace('FlavioMartil\AccessControl\Http\Controllers')
+        Route::namespace('FlavioMartil\AccessControl\Controllers')
             ->group(__DIR__ . '/../assets/routes.php');
     }
 
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/accesscontrol.php', 'accesscontrol'
+            __DIR__ . '/../assets/config/accesscontrol.php', 'accesscontrol'
         );
     }
 }
