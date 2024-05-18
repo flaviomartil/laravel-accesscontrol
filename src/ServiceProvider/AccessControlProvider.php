@@ -23,7 +23,9 @@ class AccessControlProvider extends ServiceProvider
             ], 'language');
         }
 
-        $this->loadRoutes();
+        if (!config('accesscontrol.tenant.use_tenant')) {
+            $this->loadRoutes();
+        }
     }
 
     protected function loadRoutes()

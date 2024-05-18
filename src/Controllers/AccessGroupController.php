@@ -12,8 +12,6 @@ class AccessGroupController extends Controller
 
     public function __construct(AccessGroupService $accessGroupService)
     {
-        $this->middleware(config('accesscontrol.tenant_middleware'));
-
         $this->accessGroupService = $accessGroupService;
     }
 
