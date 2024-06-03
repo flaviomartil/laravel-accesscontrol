@@ -20,21 +20,39 @@ class AccessGroupController extends Controller
         return response()->json($this->accessGroupService->getAccessGroups());
     }
 
-    public function setAccessGroups(Request $request)
+    public function createAccessGroup(Request $request)
     {
-        $roleId = $request->input('role_id');
-        $permissionIds = $request->input('permission_ids');
-
-        return response()->json($this->accessGroupService->setAccessGroups($roleId, $permissionIds));
+        $data = $request->only(['code', 'name']);
+        return response()->json($this->accessGroupService->createAccessGroup($data));
     }
 
-    public function deleteAccessGroups(Request $request)
+
+    public function updateAccessGroup(Request $request, $uuid)
     {
-        $roleId = $request->input('role_id');
-        $permissionId = $request->input('permission_id');
+        $data = $request->only(['id', 'code', 'permissions']);
+        return response()->json($this->accessGroupService->updateAccessGroup($uuid, $data));
+    }
 
-        $this->accessGroupService->deleteAccessGroups($roleId, $permissionId);
+    public function insertAccessGroupMembers(Request $request, $uuid)
+    {
+        $associate = $request->input('associate');
+        return response()->json($this->accessGroupService->insertAccessGroupMembers($uuid, $associate));
+    }
 
-        return response()->json(['status' => 'success']);
+    public function removeAccessGroupMembers(Request $request, $uuid)
+    {
+        $deassociate = $request->input('deassociate');
+        return response()->json($this->accessGroupService->removeAccessGroupMembers($uuid, $deassociate));
+    }
+
+    public function bulkDeleteAccessGroups(Request $request)
+    {
+        $ids = $request->input('ids');
+        return response()->json($this->accessGroupService->bulkDeleteAccessGroups($ids));
+    }
+
+    public function deleteAccessGroup($uuid)
+    {
+        return response()->json($this->accessGroupService->deleteAccessGroup($uuid));
     }
 }

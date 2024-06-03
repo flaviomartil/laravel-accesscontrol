@@ -3,33 +3,71 @@
 namespace FlavioMartil\AccessControl\Services;
 class AccessGroupService
 {
+
+    protected $roleModel;
+    protected $permissionModel;
+
+    public function __construct()
+    {
+        $this->roleModel = config('accesscontrol.role_model');
+        $this->permissionModel = config('accesscontrol.permission_model');
+    }
+
     public function getAccessGroups()
     {
-        $permissionModel = config('accesscontrol.permission_model');
-        $permissions = $permissionModel::with('module')->get();
+        $permissions = $this->permissionModel::with('module')->get();
         return $permissions;
     }
 
-    public function setAccessGroups($roleId, $permissionIds)
+    public function createAccessGroup($data)
     {
-        $roleModel = config('accesscontrol.role_model');
-        $permissionModel = config('accesscontrol.permission_model');
-
-        $role = $roleModel::findOrFail($roleId);
-        $permissions = $permissionModel::whereIn('id', $permissionIds)->get();
-
-        $role->permissions()->syncWithoutDetaching($permissions);
-
-        return $role->permissions;
+        $accessGroup = $this->roleModel::create([
+            'id' => Str::uuid(),
+            'code' => $data['code'],
+            'name' => $data['name'],
+        ]);
+        return $accessGroup;
     }
 
-    public function deleteAccessGroups($roleId, $permissionId)
+    public function updateAccessGroup($uuid, $data)
     {
-        $roleModel = config('accesscontrol.role_model');
-        $role = $roleModel::findOrFail($roleId);
-        $role->permissions()->detach($permissionId);
+        $accessGroup = $this->roleModel::findOrFail($uuid);
+        $accessGroup->update($data);
 
-        return true;
+        if (isset($data['permissions'])) {
+            $permissions = $this->permissionModel::whereIn('id', $data['permissions'])->get();
+            $accessGroup->permissions()->sync($permissions);
+        }
+
+        return $accessGroup;
+    }
+
+    public function insertAccessGroupMembers($uuid, $associate)
+    {
+        $accessGroup = $this->roleModel::findOrFail($uuid);
+        $permissions = $this->permissionModel::whereIn('id', $associate)->get();
+        $accessGroup->permissions()->syncWithoutDetaching($permissions);
+        return $accessGroup->permissions;
+    }
+
+    public function removeAccessGroupMembers($uuid, $deassociate)
+    {
+        $accessGroup = $this->roleModel::findOrFail($uuid);
+        $accessGroup->permissions()->detach($deassociate);
+        return $accessGroup->permissions;
+    }
+
+    public function bulkDeleteAccessGroups($ids)
+    {
+        $this->roleModel::destroy($ids);
+        return ['status' => 'success'];
+    }
+
+    public function deleteAccessGroup($uuid)
+    {
+        $accessGroup = $this->roleModel::findOrFail($uuid);
+        $accessGroup->delete();
+        return ['status' => 'success'];
     }
 }
 
