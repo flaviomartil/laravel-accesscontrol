@@ -12,4 +12,5 @@ Route::group(['prefix' => 'access-groups'], function () {
     Route::delete('/', [AccessGroupController::class, 'bulkDeleteAccessGroups']);
     Route::delete('/{uuid}', [AccessGroupController::class, 'deleteAccessGroup']);
     Route::get('/', [AccessGroupController::class, 'getAccessGroups']);
+    Route::get('/{uuid}', [AccessGroupController::class, 'getAccessGroup']);
 });
