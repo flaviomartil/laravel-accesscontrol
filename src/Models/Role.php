@@ -11,6 +11,9 @@ class Role extends Model
 {
     use HasFactory;
     use HasUuids;
+
+    protected $fillable = ['id'];
+
     public function permissions(): BelongsToMany
     {
         return $this->belongsToMany(
