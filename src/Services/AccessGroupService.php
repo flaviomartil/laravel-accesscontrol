@@ -18,7 +18,7 @@ class AccessGroupService
 
     public function getAccessGroup($id)
     {
-        $permissions = $this->permissionModel::where(['id', $id])->with('module')->firstOrFail();
+        $permissions = $this->permissionModel::findOrFail($id)->with('module');
         return $permissions;
     }
 
