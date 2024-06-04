@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d10c2452-850e-4fd3-a338-04037d24efc6" name="Changes" comment="Change namespace" />
+    <list default="true" id="d10c2452-850e-4fd3-a338-04037d24efc6" name="Changes" comment="added methods to create,delete,bulk-delete,update access-group and for associate/diassociate">
+      <change beforePath="$PROJECT_DIR$/.idea/laravel-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-idea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,16 +17,19 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2gbju1KuEaACjUyJZdunM7X2S2I" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -36,23 +42,29 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.laravel-idea.update-module-directories": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "false",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu-20.04/home/flavio/LaravelMenuRolePermissions/AccessControl-For-Laravel/src/resources/lang/es-ES",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu-20.04/home/flavio/LaravelMenuRolePermissions/AccessControl-For-Laravel/src/assets/migrations",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "application.passwordSafe",
+    "settings.editor.selected.configurable": "actions.on.save",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-20.04\home\flavio\LaravelMenuRolePermissions\AccessControl-For-Laravel\src\assets\migrations" />
+      <recent name="\\wsl.localhost\Ubuntu-20.04\home\flavio\LaravelMenuRolePermissions\AccessControl-For-Laravel\src\Controllers" />
+      <recent name="\\wsl.localhost\Ubuntu-20.04\home\flavio\LaravelMenuRolePermissions\AccessControl-For-Laravel" />
       <recent name="\\wsl.localhost\Ubuntu-20.04\home\flavio\LaravelMenuRolePermissions\AccessControl-For-Laravel\src\resources\lang\es-ES" />
       <recent name="\\wsl.localhost\Ubuntu-20.04\home\flavio\LaravelMenuRolePermissions\AccessControl-For-Laravel\src\resources\lang\pt-BR" />
-      <recent name="\\wsl.localhost\Ubuntu-20.04\home\flavio\LaravelMenuRolePermissions\AccessControl-For-Laravel\src\Database\Migrations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-20.04\home\flavio\LaravelMenuRolePermissions\AccessControl-For-Laravel\src\Services" />
+      <recent name="\\wsl.localhost\Ubuntu-20.04\home\flavio\LaravelMenuRolePermissions\AccessControl-For-Laravel\src" />
+      <recent name="\\wsl.localhost\Ubuntu-20.04\home\flavio\LaravelMenuRolePermissions\AccessControl-For-Laravel\src\assets" />
+      <recent name="\\wsl.localhost\Ubuntu-20.04\home\flavio\LaravelMenuRolePermissions\AccessControl-For-Laravel\vendor" />
       <recent name="\\wsl.localhost\Ubuntu-20.04\home\flavio\LaravelMenuRolePermissions\AccessControl-For-Laravel" />
     </key>
   </component>
@@ -72,6 +84,8 @@
       <option name="presentableId" value="Default" />
       <updated>1715973389385</updated>
       <workItem from="1715973390706" duration="2549000" />
+      <workItem from="1715975953508" duration="9573000" />
+      <workItem from="1717404180810" duration="2131000" />
     </task>
     <task id="LOCAL-00001" summary="Change namespace">
       <option name="closed" value="true" />
@@ -81,14 +95,224 @@
       <option name="project" value="LOCAL" />
       <updated>1715975313941</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Change namespace">
+      <option name="closed" value="true" />
+      <created>1715975970018</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715975970018</updated>
+    </task>
+    <task id="LOCAL-00003" summary="NameSpaceProvider">
+      <option name="closed" value="true" />
+      <created>1715976805672</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715976805672</updated>
+    </task>
+    <task id="LOCAL-00004" summary="NameSpaceProvider">
+      <option name="closed" value="true" />
+      <created>1715977009759</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715977009759</updated>
+    </task>
+    <task id="LOCAL-00005" summary="NameSpaceProvider">
+      <option name="closed" value="true" />
+      <created>1715977147000</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715977147000</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Change AccessControlProvider.php">
+      <option name="closed" value="true" />
+      <created>1715977346322</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715977346322</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Change AccessControlProvider.php">
+      <option name="closed" value="true" />
+      <created>1715977469842</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715977469842</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Change Config">
+      <option name="closed" value="true" />
+      <created>1715977606330</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715977606330</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Change Config">
+      <option name="closed" value="true" />
+      <created>1715977837264</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715977837264</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Middleware">
+      <option name="closed" value="true" />
+      <created>1715978097579</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715978097579</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Middleware">
+      <option name="closed" value="true" />
+      <created>1715978165713</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1715978165713</updated>
+    </task>
+    <task id="LOCAL-00012" summary="ExceptionFix">
+      <option name="closed" value="true" />
+      <created>1715978277036</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715978277036</updated>
+    </task>
+    <task id="LOCAL-00013" summary="ExceptionFix">
+      <option name="closed" value="true" />
+      <created>1715978758158</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715978758158</updated>
+    </task>
+    <task id="LOCAL-00014" summary="ExceptionFix">
+      <option name="closed" value="true" />
+      <created>1715978982573</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715978982573</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fix language publisher">
+      <option name="closed" value="true" />
+      <created>1715979242676</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715979242676</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Routes/Controller/Services">
+      <option name="closed" value="true" />
+      <created>1716022342972</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1716022342972</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fix register / LoadRoutes">
+      <option name="closed" value="true" />
+      <created>1716022871192</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1716022871192</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fix register / LoadRoutes">
+      <option name="closed" value="true" />
+      <created>1716022961167</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1716022961167</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Fix register / LoadRoutes">
+      <option name="closed" value="true" />
+      <created>1716023057971</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1716023057971</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added option to use prefix and middleware.">
+      <option name="closed" value="true" />
+      <created>1716023329150</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1716023329150</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added option to use prefix and middleware.">
+      <option name="closed" value="true" />
+      <created>1716024076298</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1716024076298</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added option to use prefix and middleware.">
+      <option name="closed" value="true" />
+      <created>1716024493922</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1716024493922</updated>
+    </task>
+    <task id="LOCAL-00023" summary="For tenant or no Tenant Cases">
+      <option name="closed" value="true" />
+      <created>1716025598643</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1716025598643</updated>
+    </task>
+    <task id="LOCAL-00024" summary="added README.md">
+      <option name="closed" value="true" />
+      <created>1716026173034</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1716026173034</updated>
+    </task>
+    <task id="LOCAL-00025" summary="added methods to create,delete,bulk-delete,update access-group and for associate/diassociate">
+      <option name="closed" value="true" />
+      <created>1717405327840</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1717405327840</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Change namespace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change namespace" />
+    <MESSAGE value="NameSpaceProvider" />
+    <MESSAGE value="Change AccessControlProvider.php" />
+    <MESSAGE value="Change Config" />
+    <MESSAGE value="Middleware" />
+    <MESSAGE value="ExceptionFix" />
+    <MESSAGE value="Fix language publisher" />
+    <MESSAGE value="Routes/Controller/Services" />
+    <MESSAGE value="Fix register / LoadRoutes" />
+    <MESSAGE value="Added option to use prefix and middleware." />
+    <MESSAGE value="For tenant or no Tenant Cases" />
+    <MESSAGE value="added README.md" />
+    <MESSAGE value="added methods to create,delete,bulk-delete,update access-group and for associate/diassociate" />
+    <option name="LAST_COMMIT_MESSAGE" value="added methods to create,delete,bulk-delete,update access-group and for associate/diassociate" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

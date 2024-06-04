@@ -1,6 +1,9 @@
 <?php
 
 namespace FlavioMartil\AccessControl\Services;
+
+use Illuminate\Support\Str;
+
 class AccessGroupService
 {
 
