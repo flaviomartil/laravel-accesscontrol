@@ -12,7 +12,7 @@ class Role extends Model
     use HasFactory;
     use HasUuids;
 
-    protected $fillable = ['id'];
+    protected $fillable = ['id', 'name'];
 
     public function permissions(): BelongsToMany
     {
