@@ -15,6 +15,11 @@ class AccessGroupController extends Controller
         $this->accessGroupService = $accessGroupService;
     }
 
+    public function getAccessGroup($id)
+    {
+        return response()->json($this->accessGroupService->getAccessGroups($id));
+    }
+
     public function getAccessGroups()
     {
         return response()->json($this->accessGroupService->getAccessGroups());

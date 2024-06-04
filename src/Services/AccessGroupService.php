@@ -16,6 +16,12 @@ class AccessGroupService
         $this->permissionModel = config('accesscontrol.permission_model');
     }
 
+    public function getAccessGroup($id)
+    {
+        $permissions = $this->permissionModel::where(['id', $id])->with('module')->firstOrFail();
+        return $permissions;
+    }
+
     public function getAccessGroups()
     {
         $permissions = $this->permissionModel::with('module')->get();
