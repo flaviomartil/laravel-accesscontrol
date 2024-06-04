@@ -18,7 +18,10 @@ class AccessGroupService
 
     public function getAccessGroup($id)
     {
-        $permissions = $this->permissionModel::findOrFail($id)->with('module');
+        $permissions = $this->permissionModel::
+        whereHas('module', function ($query) use ($id) {
+            $query->where('module_id', $id);
+        })->first();
         return $permissions;
     }
 
